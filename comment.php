@@ -1,7 +1,6 @@
 <?php
-// Paramètres de connexion à la base de données
-$servername = "localhost"; // Adaptez à votre configuration
-$dbname = "DatabaseForum"; // Nom de la base de données
+$servername = "localhost"; 
+$dbname = "DatabaseForum"; 
 
 // Initialisation de l'objet mysqli
 $conn = mysqli_init();
@@ -14,11 +13,11 @@ $conn->options(MYSQLI_OPT_SSL_VERIFY_SERVER_CERT, true);
 
 // Spécifier les chemins vers les fichiers de certificats et de clés
 $conn->ssl_set(
-    '/chemin/vers/client-key.pem',   // Chemin vers la clé privée
-    '/chemin/vers/client-cert.pem',  // Chemin vers le certificat client
-    '/chemin/vers/ca-cert.pem',      // Chemin vers le certificat CA
-    NULL,                            // Chemin vers le dossier CA (si nécessaire)
-    NULL                             // Liste des algorithmes de chiffrement (si nécessaire)
+    '/chemin/vers/client-key.pem',   
+    '/chemin/vers/client-cert.pem',  
+    '/chemin/vers/ca-cert.pem',      
+    NULL,                            
+    NULL                             
 );
 
 // Établissement de la connexion avec SSL
